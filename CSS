@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#myList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#myList li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #eee;
+}
+
+#myList li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
