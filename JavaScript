@@ -1,0 +1,41 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the elements we'll be manipulating
+    const dynamicTextElement = document.getElementById('dynamicText');
+    const styleButton = document.getElementById('styleButton');
+    const listElement = document.getElementById('myList');
+    const addButton = document.getElementById('addButton');
+    const removeButton = document.getElementById('removeButton');
+    const elementContainer = document.getElementById('elementContainer');
+
+    // Function to change text content
+    function changeText() {
+        dynamicTextElement.textContent = 'The text has been changed dynamically!';
+    }
+
+    // Function to modify CSS styles
+    function changeStyle() {
+        dynamicTextElement.style.color = 'blue';
+        dynamicTextElement.style.backgroundColor = 'lightyellow';
+        dynamicTextElement.style.padding = '5px';
+    }
+
+    // Function to add a new list item
+    function addListItem() {
+        const newListItem = document.createElement('li');
+        newListItem.textContent = `New Item ${listElement.children.length + 1}`;
+        listElement.appendChild(newListItem);
+    }
+
+    // Function to remove the last list item
+    function removeListItem() {
+        if (listElement.children.length > 0) {
+            listElement.removeChild(listElement.lastElementChild);
+        }
+    }
+
+    // Event listeners to trigger the functions
+    styleButton.addEventListener('click', changeStyle);
+    dynamicTextElement.addEventListener('click', changeText); // Added an event listener to the text itself
+    addButton.addEventListener('click', addListItem);
+    removeButton.addEventListener('click', removeListItem);
+});
